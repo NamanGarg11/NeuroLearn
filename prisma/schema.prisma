@@ -15,12 +15,11 @@ model User {
   email         String   @unique
   mobile        String
   dob           String
-  lastLogin     DateTime @default(now())
   currentStreak Int      @default(0)
+  lastLogin     DateTime @default(now())
+  experience    Int      @default(0)
+  level         Int      @default(1)
   topics        Topic[]
-
-  level        Int      @default(1)
-  experience   Int      @default(0)
 }
 
 model Topic {
@@ -29,15 +28,9 @@ model Topic {
   title     String
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
-  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  note      Note?
   resources Resource[]
-  note      Note? // <-- This line is new
-}
-
-enum ResourceType {
-  ARTICLE
-  VIDEO
-  PDF
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Resource {
@@ -49,8 +42,8 @@ model Resource {
   summary   String
   createdAt DateTime     @default(now())
   updatedAt DateTime     @updatedAt
+  quizzes   Quiz?
   topic     Topic        @relation(fields: [topicId], references: [id], onDelete: Cascade)
-  quizzes   Quiz[]
 }
 
 model Quiz {
@@ -91,14 +84,18 @@ model ContactQuery {
   createdAt DateTime @default(now())
 }
 
-// v-- This entire model is new --v
 model Note {
   id        String   @id @default(uuid())
-  content   String?  @db.Text
+  content   String?
   topicId   String   @unique
   userId    String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  topic     Topic    @relation(fields: [topicId], references: [id], onDelete: Cascade)
+}
 
-  topic Topic @relation(fields: [topicId], references: [id], onDelete: Cascade)
+enum ResourceType {
+  ARTICLE
+  VIDEO
+  PDF
 }
