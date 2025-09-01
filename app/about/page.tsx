@@ -8,6 +8,9 @@ import {
   Rocket,
   CheckCircle,
   TrendingUp,
+  Calendar,
+  BookOpen,
+  Clock,
 } from "lucide-react";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { NumberTicker } from "@/components/magicui/number-ticker";
@@ -15,18 +18,18 @@ import CTA from "@/components/landing/CTA";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "About Us | Smriti AI",
+  title: "About Us | Vidhya AI",
   description:
-    "Learn about Smriti AI, your AI-powered study companion that helps you summarize content, generate flashcards, create mindmaps, attempt quizzes, and follow personalized learning roadmaps for faster, smarter learning.",
+    "Discover Vidhya AI — your AI-powered memory companion. We help learners with AI-generated study roadmaps, free curated content, personalized reminders, and scientifically-backed retention methods for smarter, faster learning.",
   keywords: [
-    "Smriti AI About Us",
-    "AI study companion",
-    "personalized learning",
-    "mindmaps AI",
-    "flashcards generator",
-    "AI quizzes",
-    "learning roadmap",
-    "study assistant AI",
+    "Vidhya AI About Us",
+    "AI memory learning",
+    "personalized study roadmap",
+    "AI reminders",
+    "free study content",
+    "AI learning assistant",
+    "memory retention AI",
+    "study smarter AI",
   ],
 };
 
@@ -34,27 +37,27 @@ export default function AboutPage() {
   const features = [
     {
       icon: Brain,
-      title: "Artificial Intelligence",
+      title: "Smart Roadmaps",
       description:
-        "Advanced AI that understands context and provides personalized learning experiences.",
+        "AI-generated study roadmaps designed to guide you step by step, so you always know what to learn next.",
     },
     {
-      icon: Zap,
-      title: "Lightning Fast",
+      icon: BookOpen,
+      title: "Free Study Content",
       description:
-        "Instant summaries, mind maps, and MCQ generation. Learn faster, retain longer, succeed sooner.",
+        "Access curated notes, explanations, and practice material — all free and tailored to your learning needs.",
     },
     {
-      icon: Shield,
-      title: "Privacy First",
+      icon: Clock,
+      title: "Timely Reminders",
       description:
-        "Your learning data is encrypted and secure. We prioritize your privacy above everything else.",
+        "Never forget again. Vidhya AI sends reminders at the right time to help you retain concepts effortlessly.",
     },
     {
       icon: TrendingUp,
-      title: "Proven Results",
+      title: "Better Retention",
       description:
-        "Students report 100% better retention rates using our scientifically-backed learning methods.",
+        "Our spaced repetition and memory-first approach ensures you remember what you learn for the long term.",
     },
   ];
 
@@ -63,30 +66,30 @@ export default function AboutPage() {
       icon: Target,
       title: "Mission",
       description:
-        "Making quality education accessible to every learner, regardless of their background or resources.",
-      highlight: "Democratize Learning",
+        "To make remembering and retaining knowledge effortless through AI-driven roadmaps, reminders, and free content.",
+      highlight: "Memory First",
     },
     {
       icon: Lightbulb,
       title: "Innovation",
       description:
-        "Pushing boundaries with cutting-edge AI to transform how students learn and retain information.",
-      highlight: "Future-Ready Tech",
+        "Harnessing AI to create smarter learning systems that adapt to your goals and make studying stress-free.",
+      highlight: "Smart Learning",
     },
     {
       icon: Users,
       title: "Community",
       description:
-        "Building a global community of learners, educators, and innovators working together for better education.",
-      highlight: "Global Impact",
+        "Empowering learners globally by providing accessible tools that work for students, professionals, and lifelong learners.",
+      highlight: "Global Reach",
     },
   ];
 
   const stats = [
-    { number: 1000, label: "Active Learners", suffix: "+" },
-    { number: 95, label: "Success Rate", suffix: "%" },
-    { number: 5000, label: "Study Sessions", suffix: "+" },
-    { number: 24, label: "Countries", suffix: "+" },
+    { number: 2000, label: "Roadmaps Generated", suffix: "+" },
+    { number: 98, label: "Retention Rate", suffix: "%" },
+    { number: 10000, label: "Reminders Sent", suffix: "+" },
+    { number: 30, label: "Countries", suffix: "+" },
   ];
 
   return (
@@ -94,45 +97,39 @@ export default function AboutPage() {
       <div className="pt-32 pb-24">
         {/* Header Section */}
         <div className="max-w-7xl mx-auto px-6 md:px-20 text-center mb-10 relative">
-          {/* Gradient background overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-blue-500/5 rounded-3xl blur-3xl -z-10"></div>
 
-          {/* Main heading with improved spacing */}
           <div className="space-y-8">
             <h1>
               <span className="block font-display text-6xl md:text-9xl lg:text-[10rem] font-black text-white mb-6 leading-[0.85] tracking-tight">
-                Smriti <span className="text-primary">AI</span>
+                Vidhya <span className="text-primary">AI</span>
               </span>
               <TextAnimate
                 animation="blurIn"
                 as="span"
                 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white/90 max-w-4xl mx-auto leading-tight"
               >
-                Your Personalized AI Study Companion
+                Your AI Memory & Learning Companion
               </TextAnimate>
             </h1>
 
-            {/* Key benefits */}
             <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base text-white/60 font-medium">
               <span className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                Adaptive Learning
+                AI Roadmaps
               </span>
               <span className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                Smart Retention
+                Free Study Content
               </span>
               <span className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                Progress Tracking
+                Smart Reminders
               </span>
             </div>
           </div>
-
-          {/* Floating elements for visual interest */}
-          <div className="absolute -top-8 -left-8 w-16 h-16 bg-primary/10 rounded-full blur-xl animate-bounce"></div>
-          <div className="absolute -bottom-8 -right-8 w-20 h-20 bg-blue-400/10 rounded-full blur-xl animate-bounce delay-1000"></div>
         </div>
+
         {/* Stats Section */}
         <div className="max-w-7xl mx-auto px-6 md:px-20 mb-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
@@ -151,15 +148,16 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
+
         {/* Features Section */}
         <div className="max-w-7xl mx-auto px-6 md:px-20 mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              What Makes Us <span className="text-primary">Different</span>
+              What Makes Us <span className="text-primary">Unique</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Cutting-edge technology meets educational excellence to deliver
-              unmatched learning experiences.
+              Vidhya AI focuses on memory, making sure you not only learn but
+              also remember and recall information when it matters most.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -178,12 +176,10 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
+
         {/* Vision Section */}
         <div className="max-w-7xl mx-auto px-6 md:px-20 mb-20">
           <div className="bg-gradient-to-br from-primary/8 via-primary/4 to-transparent border border-primary/15 rounded-3xl p-8 md:p-16 relative overflow-hidden">
-            {/* Background pattern */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(var(--primary),0.03),transparent_70%)]"></div>
-
             <div className="relative space-y-12">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 border border-primary/20 rounded-2xl mb-6">
@@ -194,54 +190,35 @@ export default function AboutPage() {
                 </h2>
 
                 <p className="text-lg text-center text-white/70 leading-relaxed">
-                  "Smriti" means "memory" in Sanskrit our mission is to help you
-                  learn and remember.
+                  "Vidhya" means "knowledge" in Sanskrit — our vision is to make
+                  remembering as effortless as learning.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-12 items-start">
                 <div className="space-y-6">
                   <p className="text-lg md:text-xl text-white/70 leading-relaxed">
-                    In a world where information overload hampers learning,
-                    Smriti AI emerges as your intelligent study companion. We
-                    believe that with the right tools and AI assistance, every
-                    student can unlock their true potential.
+                    Vidhya AI is built for the learner who wants more than just
+                    study notes. With AI-powered roadmaps, free resources, and
+                    timely reminders, we help you stay consistent and confident
+                    in your learning journey.
                   </p>
                 </div>
 
                 <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-6 h-6 bg-primary/20 border border-primary/30 rounded-lg flex items-center justify-center mt-1">
-                      <CheckCircle className="w-4 h-4 text-primary" />
+                  {[
+                    "AI-powered personalized study roadmaps",
+                    "Free and accessible study content",
+                    "Smart reminders for better retention",
+                    "Helping learners worldwide remember better",
+                  ].map((point, i) => (
+                    <div key={i} className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-6 h-6 bg-primary/20 border border-primary/30 rounded-lg flex items-center justify-center mt-1">
+                        <CheckCircle className="w-4 h-4 text-primary" />
+                      </div>
+                      <span className="text-white/80 text-lg">{point}</span>
                     </div>
-                    <span className="text-white/80 text-lg">
-                      AI-powered personalized learning
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-6 h-6 bg-primary/20 border border-primary/30 rounded-lg flex items-center justify-center mt-1">
-                      <CheckCircle className="w-4 h-4 text-primary" />
-                    </div>
-                    <span className="text-white/80 text-lg">
-                      Scientifically-backed retention methods
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-6 h-6 bg-primary/20 border border-primary/30 rounded-lg flex items-center justify-center mt-1">
-                      <CheckCircle className="w-4 h-4 text-primary" />
-                    </div>
-                    <span className="text-white/80 text-lg">
-                      Seamless study workflow integration
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-6 h-6 bg-primary/20 border border-primary/30 rounded-lg flex items-center justify-center mt-1">
-                      <CheckCircle className="w-4 h-4 text-primary" />
-                    </div>
-                    <span className="text-white/80 text-lg">
-                      Accessible to students worldwide
-                    </span>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -255,8 +232,8 @@ export default function AboutPage() {
               Our Core <span className="text-primary">Values</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              The principles that guide everything we do and every decision we
-              make.
+              The principles that guide Vidhya AI in building tools that make
+              learning smarter, simpler, and stress-free.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">

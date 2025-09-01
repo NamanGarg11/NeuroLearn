@@ -63,8 +63,10 @@ const AnimatedImage: React.FC<AnimatedImageProps> = ({
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
       >
         <div className="relative w-full">
-          <div className="absolute inset-0 bg-[#9dff073b] blur-[150px] rounded-full scale-110" />
-          <div className="absolute inset-0 bg-[#9dff073b] blur-[100px] rounded-full scale-95" />
+          {/* Purple aura glow layers */}
+          <div className="absolute inset-0 bg-purple-500/30 blur-[150px] rounded-full scale-110" />
+          <div className="absolute inset-0 bg-purple-400/30 blur-[100px] rounded-full scale-95" />
+
           <Image
             src={src}
             alt={alt}

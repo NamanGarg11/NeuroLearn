@@ -41,8 +41,6 @@ const Hero = () => {
         )}
       />
 
-      <OpenSourceBtn />
-
       <motion.div variants={itemVariants}>
         <TextAnimate
           animation="blurIn"
@@ -62,13 +60,14 @@ const Hero = () => {
       </motion.h2>
       <motion.div variants={itemVariants} className="z-20">
         <Link href={linkHref} passHref>
-          <Button className="bg-gradient-to-r from-[#adff2f] to-[#9dff07] hover:from-[#9dff07] hover:to-[#adff2f] text-black font-semibold rounded-full cursor-pointer px-8 py-3 h-auto transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#adff2f]/30 group relative overflow-hidden border-0">
-            <span className="relative z-10 flex items-center gap-2">
-              Get Started
-              <ArrowRightIcon className="w-8 h-8 transform transition-transform duration-300 group-hover:translate-x-1" />
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-[#9dff07] to-[#adff2f] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </Button>
+        <Button className="bg-gradient-to-r from-[#a855f7] to-[#9333ea] hover:from-[#9333ea] hover:to-[#a855f7] text-white font-semibold rounded-full cursor-pointer px-8 py-3 h-auto transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 group relative overflow-hidden border-0">
+  <span className="relative z-10 flex items-center gap-2">
+    Get Started
+    <ArrowRightIcon className="w-8 h-8 transform transition-transform duration-300 group-hover:translate-x-1" />
+  </span>
+  <div className="absolute inset-0 bg-gradient-to-r from-[#9333ea] to-[#a855f7] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</Button>
+
         </Link>
       </motion.div>
       <motion.div variants={itemVariants}>

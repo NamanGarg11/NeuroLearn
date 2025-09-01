@@ -59,18 +59,26 @@
 
   --animate-marquee: marquee var(--duration) infinite linear;
 
-  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite
-;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  
   @keyframes marquee {
-  from {
-    transform: translateX(0);}
-  to {
-    transform: translateX(calc(-100% - var(--gap)));}}
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);}
-  to {
-    transform: translateY(calc(-100% - var(--gap)));}}}
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
 
 :root {
   --radius: 0.625rem;
@@ -105,11 +113,11 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --color-1: hsl(0 100% 63%);
-  --color-2: hsl(270 100% 63%);
-  --color-3: hsl(210 100% 63%);
-  --color-4: hsl(195 100% 63%);
-  --color-5: hsl(90 100% 63%);
+  --color-1: hsl(270 100% 70%);
+  --color-2: hsl(240 100% 70%);
+  --color-3: hsl(210 100% 70%);
+  --color-4: hsl(195 100% 70%);
+  --color-5: hsl(180 100% 70%);
 }
 
 .dark {
@@ -144,11 +152,11 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-  --color-1: hsl(0 100% 63%);
-  --color-2: hsl(270 100% 63%);
-  --color-3: hsl(210 100% 63%);
-  --color-4: hsl(195 100% 63%);
-  --color-5: hsl(90 100% 63%);
+  --color-1: hsl(270 100% 70%);
+  --color-2: hsl(240 100% 70%);
+  --color-3: hsl(210 100% 70%);
+  --color-4: hsl(195 100% 70%);
+  --color-5: hsl(180 100% 70%);
 }
 
 @layer base {
@@ -165,7 +173,41 @@ body {
 }
 
 @theme {
-  --color-primary: #adff2f;
+  /* Primary Purple & Blue Colors for Vidhya AI */
+  --color-primary: #8B5CF6; /* Purple-500 */
+  --color-primary-dark: #7C3AED; /* Purple-600 */
+  --color-primary-light: #A855F7; /* Purple-500 alternative */
+  --color-secondary: #3B82F6; /* Blue-500 */
+  --color-secondary-dark: #2563EB; /* Blue-600 */
+  --color-secondary-light: #60A5FA; /* Blue-400 */
+  
+  /* Gradient combinations */
+  --gradient-primary: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #7C3AED 0%, #2563EB 100%);
+  
+  /* Purple variations */
+  --purple-50: #FAF5FF;
+  --purple-100: #F3E8FF;
+  --purple-200: #E9D5FF;
+  --purple-300: #D8B4FE;
+  --purple-400: #C084FC;
+  --purple-500: #A855F7;
+  --purple-600: #9333EA;
+  --purple-700: #7C3AED;
+  --purple-800: #6B21A8;
+  --purple-900: #581C87;
+  
+  /* Blue variations */
+  --blue-50: #EFF6FF;
+  --blue-100: #DBEAFE;
+  --blue-200: #BFDBFE;
+  --blue-300: #93C5FD;
+  --blue-400: #60A5FA;
+  --blue-500: #3B82F6;
+  --blue-600: #2563EB;
+  --blue-700: #1D4ED8;
+  --blue-800: #1E40AF;
+  --blue-900: #1E3A8A;
 }
 
 /* Webkit-based browsers (Chrome, Edge, Safari) */
@@ -179,19 +221,19 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(100, 100, 100, 0.4); /* Subtle dark gray */
+  background: rgba(139, 92, 246, 0.4); /* Purple tint */
   border-radius: 4px;
   transition: background 0.3s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(100, 100, 100, 0.6); /* Slightly darker on hover */
+  background: rgba(139, 92, 246, 0.6); /* Darker purple on hover */
 }
 
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(100, 100, 100, 0.4) transparent;
+  scrollbar-color: rgba(139, 92, 246, 0.4) transparent;
 }
 
 .markdown-body {
@@ -279,8 +321,6 @@ body {
   position: relative !important;
 }
 
-/* Phone input field and button styles now handled via inline styles in component */
-
 /* React Tel Input component specific styles */
 .react-tel-input {
   width: 100% !important;
@@ -302,7 +342,7 @@ body {
 
 .react-tel-input .form-control:focus {
   border-color: var(--color-primary) !important;
-  box-shadow: 0 0 0 2px var(--color-primary) !important;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2) !important;
 }
 
 .react-tel-input .form-control::placeholder {
@@ -325,7 +365,7 @@ body {
 }
 
 .react-tel-input .flag-dropdown:hover {
-  background-color: rgba(82, 82, 91, 0.3) !important;
+  background-color: rgba(139, 92, 246, 0.1) !important;
 }
 
 .react-tel-input .selected-flag {
@@ -347,7 +387,7 @@ body {
 }
 
 .react-tel-input .flag-dropdown.open .selected-flag {
-  background-color: rgba(82, 82, 91, 0.3) !important;
+  background-color: rgba(139, 92, 246, 0.2) !important;
 }
 
 .react-tel-input .country-list {
@@ -390,7 +430,7 @@ body {
 }
 
 .react-tel-input .country-list .country:hover {
-  background-color: #3f3f46 !important;
+  background-color: rgba(139, 92, 246, 0.1) !important;
 }
 
 .react-tel-input .country-list .country.highlight {
@@ -418,4 +458,29 @@ body {
 
 .dark-time-picker {
   color-scheme: dark;
+}
+
+/* Vidhya AI Custom Utility Classes */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-primary-hover:hover {
+  background: var(--gradient-primary-hover);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.border-secondary {
+  border-color: var(--color-secondary);
 }

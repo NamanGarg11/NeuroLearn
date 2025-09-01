@@ -205,7 +205,7 @@ export default function ContactPage() {
                 className="text-lg text-muted-foreground max-w-2xl mx-auto"
                 variants={itemVariants}
               >
-                Have questions about Smriti AI? We'd love to hear from you!
+                Have questions about Vidhya AI? We'd love to hear from you!
               </motion.p>
             </motion.div>
 
@@ -402,7 +402,7 @@ export default function ContactPage() {
                           Email
                         </h3>
                         <p className="text-muted-foreground">
-                          support@smriti.live
+                          support@VidhayAI.live
                         </p>
                       </div>
                     </CardContent>

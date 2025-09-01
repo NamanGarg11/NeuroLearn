@@ -1,17 +1,17 @@
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Terms of Use | Smriti AI",
+  title: "Terms of Use | Vidhya AI",
   description:
-    "Review the Terms of Use for Smriti AI. Learn about user responsibilities, acceptable usage, and our service guidelines before using our platform.",
+    "Review the Terms of Use for Vidhya AI. Learn about user responsibilities, acceptable usage, and our service guidelines before using our platform.",
   keywords: [
-    "Smriti AI Terms of Use",
-    "Smriti AI policies",
+    "Vidhya AI Terms of Use",
+    "Vidhya AI policies",
     "user agreement",
     "AI usage guidelines",
     "terms and conditions",
     "service rules",
-    "Smriti AI legal terms",
+    "Vidhya AI legal terms",
   ],
 };
 
@@ -23,7 +23,7 @@ export default function TermsOfUse() {
           Terms of Use
         </h1>
         <p className="text-gray-700 dark:text-gray-300 mb-6">
-          These Terms of Use govern your access to and use of Smriti AI and its
+          These Terms of Use govern your access to and use of Vidhya AI and its
           services. By accessing or using any part of the site, you agree to be
           bound by these terms.
         </p>

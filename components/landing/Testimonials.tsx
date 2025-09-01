@@ -46,7 +46,7 @@ export default function Testimonials() {
             <span className="text-primary"> Real Impact </span>
             </h2>
             <p className="text-gray-400 text-lg">
-            Discover how Smriti AI helps learners retain knowledge longer and faster.
+            Discover how Vidhya AI helps learners retain knowledge longer and faster.
             </p>
         </div>
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
